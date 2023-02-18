@@ -11,8 +11,8 @@ const Component = styled(Box)`
 // box-shadow: 5px 2px 5px 2px rgb(0 0 0/ 0.6);
 
 const Image = styled("img")({
-  width: 200,
-  height:200,
+  width: 150,
+  height: 150,
   marginRight: "auto",
   marginLeft: "60px",
   // margin:'auto',
@@ -21,14 +21,14 @@ const Image = styled("img")({
 });
 
 const Wrapper = styled(Box)`
-  padding: 25px 30px;
+  padding: 15px 20px;
   display: flex;
   flex: 1;
   flex-direction: column;
   & > div,
   & > button,
   & > p {
-    margin-top: 20px;
+    margin-top: 0px;
   }
 `;
 
@@ -74,18 +74,18 @@ const Login = () => {
     <Component>
       <Box>
         <div style={{ display: "flex" }}>
-          <Image src={require("../../vitpodlogo.png")} alt="login" />
-          <h1 style={{marginRight:150, marginTop:110}}>Welcome Back! <br></br><span>Sign In to continue</span></h1>         
+          <Image src={require("../../vitpodlogo.png")} alt="login"  />
+          <h1 style={{ marginRight: 150, marginTop: 90 }}>Welcome Back! <br></br><span>Sign In to continue</span></h1>
         </div>
 
         {/* <Image src={imageURL} alt="login" /> */}
         {account === "login" ? (
           <Wrapper>
-            <TextField variant="standard" label="Enter username" />
-            <TextField variant="standard" label="Enter password" />
-            <LoginButton variant="contained">Login</LoginButton>
-            <Text style={{ textAlign: "center" }}>OR</Text>
-            <SignupButton onClick={() => toggleSignup()}>
+            <TextField variant="standard" label="Enter username" style={{ width: '300px', marginLeft: '300px' }} />
+            <TextField variant="standard" label="Enter password" style={{ width: '300px', marginLeft: '300px' }} />
+            <LoginButton variant="contained" style={{ width: '300px', marginLeft: '300px' }}>Login</LoginButton>
+            <Text style={{ textAlign: "center", marginLeft: '220px' }} >OR</Text>
+            <SignupButton onClick={() => toggleSignup()} style={{ width: '300px', marginLeft: '300px' }}>
               CREATE AN ACCOUNT
             </SignupButton>
           </Wrapper>
@@ -96,23 +96,26 @@ const Login = () => {
               onChange={(e) => onInputChange(e)}
               name="name"
               label="Enter Name"
+              style={{ width: '300px', marginLeft: '300px' }}
             />
             <TextField
               variant="standard"
               onChange={(e) => onInputChange(e)}
               name="username"
               label="Enter Username"
+              style={{ width: '300px', marginLeft: '300px' }}
             />
             <TextField
               variant="standard"
               onChange={(e) => onInputChange(e)}
               name="password"
               label="Enter Password"
+              style={{ width: '300px', marginLeft: '300px' }}
             />
 
-            <SignupButton>Signup</SignupButton>
-            <Text style={{ textAlign: "center" }}>OR</Text>
-            <LoginButton variant="contained" onClick={() => toggleSignup()}>
+            <SignupButton style={{ width: '300px', marginLeft: '300px' }}>Signup</SignupButton>
+            <Text style={{ textAlign: "center" , marginLeft: '220px'}}>OR</Text>
+            <LoginButton variant="contained" onClick={() => toggleSignup()} style={{ width: '300px', marginLeft: '300px' }}>
               Already have an Account
             </LoginButton>
           </Wrapper>

@@ -10,6 +10,7 @@ import background from "./background.png"
 //   height: "100%",
 // };
 
+
 const myStyle = {
   backgroundImage:`url(${background})`,
   height: "100vh",
@@ -21,8 +22,8 @@ function App() {
   return (
     <div style={myStyle}>
       <div style={{display:"flex"}}>
-      <img src={require('./vitpodlogo.png')} style={{width:200, height:200}}/>
-      <h1 style={{marginTop:80}}>VitPod</h1>
+      <img src={require('./vitpodlogo.png')} style={{width:200, height:150}}/>
+      <h1 style={{marginTop:50}}>VitPod</h1>
       </div>
       <div>
         <Login />
